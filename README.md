@@ -1,6 +1,4 @@
-=========
-RobustNet
-=========
+# RobustNet
 
 RobustNet is a Python package for simulating metabolic responses and evaluating metabolic robustness of a biosystem to catalytic enzyme level changes informed by multi-omics data of fluxomics, metabolomics, proteomics and enyzme databases. Our goal is to elucidate how intracellular metabolite levels and metabolic fluxes will adjust accordingly with respect to metabolic engineering inverventions i.e., enzyme expression level interventions and assess the system viability and fitness after the perturbations, and provide insightful guidance for biosystem designs and metabolic engineering efforts.
 
