@@ -1,16 +1,10 @@
-r'''
-This script demonstrates the use of RobustNet for metabolic robustness analysis with 
+'''This script demonstrates the use of RobustNet for metabolic robustness analysis with 
 a synechocystis model. The workflow consists of three main steps:
 1. Estimate the reference-state flux distribution.
 2. Sample model paramters using prior innformation from multi-omics data and enzyme 
    databases.
 3. Evaluate metabolic robustness and predict metabolic responses to enzyme 
    perturbations.
-
-conda activate robustnet-py311
-
-python C:\Users\cwu\Desktop\Software\RobustNet\github\robustnet-0.2.0\scripts\synechocystis_robustness.py
-python /home/cwu/Projects/RobustNet/github/robustnet-0.2.0/scripts/synechocystis_robustness.py
 '''
 
 
@@ -20,20 +14,19 @@ import pandas as pd
 from robustnet import Model
 
 
-if system() == 'Windows':
-    WORKING_DIR = r'C:\Users\cwu\Desktop\Software\RobustNet\github\robustnet-0.2.0\models\synechocystis'
-elif system() == 'Linux':
-    WORKING_DIR = '/home/cwu/Projects/RobustNet/github/robustnet-0.2.0/models/synechocystis'
-OUT_DIR = f'{WORKING_DIR}/../../results/synechocystis'
-MODEL_FILE = f'{WORKING_DIR}/synechocystis_model.xlsx'
-FLUXOMICS = f'{WORKING_DIR}/measured_fluxes.xlsx'
-FLUX_BOUNDS = f'{WORKING_DIR}/flux_bounds.xlsx'
-METABOLOMICS = f'{WORKING_DIR}/measured_metabolites.xlsx'
-PROTEOMICS = f'{WORKING_DIR}/measured_enzymes.xlsx'
-KINETIC_PARAMETERS = f'{WORKING_DIR}/measured_kinetic_parameters.xlsx'
+OUT_DIR = '../../results/synechocystis'
+MODEL_FILE = '../../models/synechocystis/synechocystis_model.xlsx'
+FLUXOMICS = '../../models/synechocystis/measured_fluxes.xlsx'
+FLUX_BOUNDS = '../../models/synechocystis/flux_bounds.xlsx'
+METABOLOMICS = '../../models/synechocystis/measured_metabolites.xlsx'
+PROTEOMICS = '../../models/synechocystis/measured_enzymes.xlsx'
+KINETIC_PARAMETERS = '../../models/synechocystis/measured_kinetic_parameters.xlsx'
 
 PERTURB_ENZYMES = [
-    'RuBisCO', 'PGK', 'GAPD', 'TPI', 'ALD', 'TKT', 'TAL', 'FBPase', 'PGI', 'G6PD', 'PGL', 'GND', 'FBA', 'SBPase', 'RPI', 'RPE', 'PRK', 'PGM', 'ENO', 'PYK', 'PDH', 'XFPK', 'PTA', 'CS', 'ACON', 'ICD', 'OGDC', 'SSADH', 'SDH', 'FUMS', 'MDH', 'ME', 'PPC', 'ATPSyn', 'NADPase'
+    'RuBisCO', 'PGK', 'GAPD', 'TPI', 'ALD', 'TKT', 'TAL', 'FBPase', 'PGI', 'G6PD',
+    'PGL', 'GND', 'FBA', 'SBPase', 'RPI', 'RPE', 'PRK', 'PGM', 'ENO', 'PYK', 'PDH', 
+    'XFPK', 'PTA', 'CS', 'ACON', 'ICD', 'OGDC', 'SSADH', 'SDH', 'FUMS', 'MDH', 'ME', 
+    'PPC', 'ATPSyn', 'NADPase'
 ]
 
 
