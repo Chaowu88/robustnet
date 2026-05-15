@@ -1,5 +1,5 @@
 '''This script demonstrates the use of RobustNet for metabolic robustness analysis with 
-a synechocystis model. The workflow consists of three main steps:
+a Synechocystis model. The workflow consists of three main steps:
 1. Estimate the reference-state flux distribution.
 2. Sample model paramters using prior innformation from multi-omics data and enzyme 
    databases.
