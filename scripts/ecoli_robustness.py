@@ -104,9 +104,6 @@ def sample_parameters(model, out_dir, fit_res_dir):
     samp_res.trace.to_netcdf(f'{out_dir}/trace.nc')
     
     # output sampled model parameters
-    samp_res.sampled_reference_fluxes.to_csv(
-        f'{out_dir}/sampled_ref_fluxes.tsv', header=True, index=True, sep='\t'
-    )
     samp_res.sampled_kinetic_parameters.to_csv(
         f'{out_dir}/sampled_kparams.tsv', header=True, index=True, sep='\t'
     )
@@ -118,9 +115,6 @@ def sample_parameters(model, out_dir, fit_res_dir):
     )
 
     # visualize the comparison between sampled paramters and their priors
-    samp_res.plot_sampled_vs_prior_fluxes(
-        f'{out_dir}/sampled_fluxes_plots', fluxes='all', output_data=False
-    )
     samp_res.plot_sampled_vs_prior_kinetic_parameters(
         f'{out_dir}/sampled_kparams_plots', parameters='all', output_data=False
     )
