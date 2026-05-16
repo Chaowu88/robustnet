@@ -68,8 +68,8 @@ Next, posterior parameter distributions are inferred using multi-omics measureme
 
   model.load_priors(
     'reference_fluxes',
-    data=ref_fluxes,
-    std=ref_flux_uncertainties
+    data=fit_res.estimated_fluxes,
+    std=fit_res.estimated_flux_errors
   )
   model.load_priors(
     'metabolomics',
@@ -103,9 +103,9 @@ Using the parameterized ensemble models, metabolic responses and robustness can 
 .. code-block:: python
 
   model.load_parameter_sets(
-    mconc_set=sampled_metab_concentrations,
-    econc_set=sampled_enz_concentrations,
-    kparam_set=sampled_kparams
+    mconc_set=samp_res.sampled_metabolite_concentrations,
+    econc_set=samp_res.sampled_enzyme_concentrations,
+    kparam_set=samp_res.sampled_kinetic_parameters
   )
   
   rob_res = model.evaluate_robustness(
