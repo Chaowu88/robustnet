@@ -106,6 +106,9 @@ def sample_parameters(model, out_dir, fit_res_dir):
     samp_res.sampled_kinetic_parameters.to_csv(
         f'{out_dir}/sampled_kparams.tsv', header=True, index=True, sep='\t'
     )
+   samp_res.sampled_kinetic_parameters.to_csv(
+        f'{out_dir}/sampled_kparams.tsv', header=True, index=True, sep='\t'
+    )
     samp_res.sampled_metabolite_concentrations.to_csv(
         f'{out_dir}/sampled_mconcs.tsv', header=True, index=True, sep='\t'
     )
