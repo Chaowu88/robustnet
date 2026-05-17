@@ -41,6 +41,22 @@ exclude_patterns = ['_build']
 
 html_theme = 'pydata_sphinx_theme'
 
+html_theme_options = {
+    'show_toc_level': 2,
+    'navigation_with_keys': True,
+    'navbar_end': ['theme-switcher', 'navbar-icon-links'],
+    'icon_links': [
+        {
+            'name': 'GitHub',
+            'url': 'https://github.com/Chaowu88/robustnet',
+            'icon': 'fa-brands fa-github',
+        },
+    ],
+}
+
+pygments_light_style = 'tango'
+pygments_dark_style = 'monokai'
+
 
 # ------------------------ Options for HTML output ------------------------
 mathjax_path = ('https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML')
