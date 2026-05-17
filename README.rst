@@ -59,7 +59,7 @@ The first step is to estimate a reference steady-state flux distribution consist
     exclude_metabolites=excluded_from_mass_balance
   )
 
-2. Generate ensemble model sets
+2. Generate ensemble model parameter sets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Next, posterior parameter distributions are inferred using multi-omics measurements and enzyme kinetic priors. The resulting sampled parameter sets are used to construct ensembles of kinetic models for downstream simulations.
