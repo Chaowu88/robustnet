@@ -11,7 +11,7 @@ sys.path.insert(0, SRC_PATH)
 project = 'robustnet'
 copyright = '2026, Chao Wu'
 author = 'Chao Wu'
-from robustnet import __version__ as version
+version = '0.2.0'
 release = version
 
 pygments_style = 'sphinx'
