@@ -39,6 +39,8 @@ master_doc = 'index'
 # directories to ignore when looking for source files.
 exclude_patterns = ['_build']
 
+html_theme = 'pydata_sphinx_theme'
+
 
 # ------------------------ Options for HTML output ------------------------
 mathjax_path = ('https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML')
