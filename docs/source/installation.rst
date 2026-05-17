@@ -28,7 +28,7 @@ Alternatively, RobustNet can be installed from source by cloning the GitHub repo
 
   For large-scale simulations and improved computational efficiency, deploying RobustNet on a high-performance computing system with parallel exccution enabled is strongly recommended.
 
-Optional Solver installation
+Optional solver installation
 ----------------------------
 
 RobustNet uses ``SciPy`` `optimizers <https://docs.scipy.org/doc/scipy/tutorial/optimize.html>`__ by default for estimating reference fluxes. The ``NLopt`` optimization library is also supported but must be installed seperately. Please refer to their `guide <https://nlopt.readthedocs.io/en/latest/NLopt_Installation/>`__ for instructions.
