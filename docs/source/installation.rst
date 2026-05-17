@@ -31,4 +31,4 @@ Alternatively, RobustNet can be installed from source by cloning the GitHub repo
 Optional Solver installation
 ----------------------------
 
-RobustNet uses ``SciPy`` `optimizers <https://docs.scipy.org/doc/scipy/tutorial/optimize.html>`__`` by default for estimating reference fluxes. The ``NLopt`` optimization library is also supported but must be installed seperately. Please refer to their `guide <https://nlopt.readthedocs.io/en/latest/NLopt_Installation/>`__ for instructions.
+RobustNet uses ``SciPy`` `optimizers <https://docs.scipy.org/doc/scipy/tutorial/optimize.html>`__ by default for estimating reference fluxes. The ``NLopt`` optimization library is also supported but must be installed seperately. Please refer to their `guide <https://nlopt.readthedocs.io/en/latest/NLopt_Installation/>`__ for instructions.
