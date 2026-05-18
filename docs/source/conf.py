@@ -55,6 +55,9 @@ html_theme_options = {
     'show_nav_level': 2,
 }
 
+autosummary_generate = True
+root_doc = 'index'
+
 pygments_light_style = 'tango'
 pygments_dark_style = 'monokai'
 
