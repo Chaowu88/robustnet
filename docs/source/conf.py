@@ -33,7 +33,7 @@ autoapi_type = 'python'
 autoapi_dirs = [join(SRC_PATH, 'robustnet')]
 autoapi_add_toctree_entry = True
 
-source_suffix = '.rst'
+source_suffix = ['.rst', '.ipynb']
 master_doc = 'index'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
