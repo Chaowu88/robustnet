@@ -31,7 +31,7 @@ extensions = [
 
 autoapi_type = 'python'
 autoapi_dirs = [join(SRC_PATH, 'robustnet')]
-autoapi_add_toctree_entry = False
+autoapi_add_toctree_entry = True
 
 source_suffix = '.rst'
 master_doc = 'index'
