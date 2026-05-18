@@ -10,7 +10,6 @@ The typical RobustNet workflow consists of three steps:
 - Simulate metabolic responses and evaluate system robustness
 
 .. toctree::
-   :numbered:
    :maxdepth: 2
    :caption: Contents:
 
