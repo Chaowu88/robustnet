@@ -15,7 +15,7 @@ The typical RobustNet workflow consists of three steps:
    :caption: Contents:
 
    installation
-   build_model
+   tutorials/build_model
    API </autoapi/robustness/index.rst>
 
 Indices and tables
