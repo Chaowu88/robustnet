@@ -57,6 +57,7 @@ html_theme_options = {
 
 html_sidebars = {
     '**': ['sidebar-nav-bs']
+}
 
 pygments_light_style = 'tango'
 pygments_dark_style = 'monokai'
