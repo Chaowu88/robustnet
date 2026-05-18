@@ -74,6 +74,7 @@ html_theme_options = {
         },
     ],
     'show_nav_level': 2,
+    'sidebar_nav_type': 'accordion',
     'collapse_navigation': False
 }
 
