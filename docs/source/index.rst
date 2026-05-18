@@ -15,4 +15,3 @@ The typical RobustNet workflow consists of three steps:
 
    Installation <installation>
    Building a model <build_model>
-   API reference <autoapi/robustnet/index>
