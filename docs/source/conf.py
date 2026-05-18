@@ -44,7 +44,11 @@ html_theme = 'pydata_sphinx_theme'
 html_theme_options = {
     'show_toc_level': 2,
     'navigation_with_keys': True,
-    #'navbar_end': ['theme-switcher', 'navbar-icon-links'],
+    'navbar_end': [
+        'search-button',
+        'theme-switcher', 
+        'navbar-icon-links'
+    ],
     'icon_links': [
         {
             'name': 'GitHub',
@@ -56,7 +60,6 @@ html_theme_options = {
 }
 
 autosummary_generate = True
-root_doc = 'index'
 
 pygments_light_style = 'tango'
 pygments_dark_style = 'monokai'
