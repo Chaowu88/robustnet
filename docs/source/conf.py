@@ -2,16 +2,19 @@
 
 import sys
 from os.path import dirname, join
+from datetime import datetime
+from importlib.metadata import version as get_version
+
 
 SRC_PATH = join(dirname(dirname(dirname(__file__))), 'src')
 sys.path.insert(0, SRC_PATH)
 
 
 # -- Project information
-project = 'robustnet'
-copyright = '2026, Chao Wu'
+project = 'RobustNet'
+copyright = f'{datetime.now():%Y}, Chao Wu'
 author = 'Chao Wu'
-version = '0.2.0'
+version = get_version('robustnet')
 release = version
 
 
@@ -31,7 +34,7 @@ autoapi_type = 'python'
 autoapi_dirs = [join(SRC_PATH, 'robustnet')]
 autoapi_add_toctree_entry = True
 
-source_suffix = '.rst'
+#source_suffix = '.rst'
 master_doc = 'index'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
