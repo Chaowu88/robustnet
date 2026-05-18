@@ -55,6 +55,7 @@ html_theme_options = {
         },
     ],
     'show_nav_level': 2,
+    'collapse_navigation': False
 }
 
 pygments_light_style = 'tango'
