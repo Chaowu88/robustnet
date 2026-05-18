@@ -3,7 +3,7 @@
 import sys
 from os.path import dirname, join
 from datetime import datetime
-from importlib.metadata import version as get_version
+#from importlib.metadata import version as get_version
 
 
 SRC_PATH = join(dirname(dirname(dirname(__file__))), 'src')
@@ -14,7 +14,7 @@ sys.path.insert(0, SRC_PATH)
 project = 'RobustNet'
 copyright = f'{datetime.now():%Y}, Chao Wu'
 author = 'Chao Wu'
-version = get_version('robustnet')
+version = '0.2.0'#get_version('robustnet')
 release = version
 
 
@@ -40,6 +40,22 @@ master_doc = 'index'
 # directories to ignore when looking for source files.
 exclude_patterns = ['_build']
 
+autosummary_generate = True
+
+pygments_light_style = 'tango'
+pygments_dark_style = 'monokai'
+
+# Example configuration for intersphinx: refer to the Python standard library.
+intersphinx_mapping = {
+    'python': ('https://docs.python.org/3/', None),
+    'numpy': ('https://numpy.org/doc/stable/', None),
+    'pandas': ('https://pandas.pydata.org/docs/', None),
+    'scipy': ('https://docs.scipy.org/doc/scipy/', None),
+    'pymc': ('https://www.pymc.io/projects/docs/en/stable/learn.html', None)
+}
+
+
+# ------------------------ Options for HTML output ------------------------
 html_theme = 'pydata_sphinx_theme'
 
 html_theme_options = {
@@ -61,11 +77,6 @@ html_theme_options = {
     'collapse_navigation': False
 }
 
-pygments_light_style = 'tango'
-pygments_dark_style = 'monokai'
-
-
-# ------------------------ Options for HTML output ------------------------
 mathjax_path = ('https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML')
 
 
@@ -110,18 +121,3 @@ texinfo_documents = [
      'Miscellaneous'
     )
 ]
-
-
-# ------------------------ Intersphinx configuration ------------------------
-# Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {
-    'python': ('https://docs.python.org/3/', None),
-    'numpy': ('https://numpy.org/doc/stable/', None),
-    'pandas': ('https://pandas.pydata.org/docs/', None),
-    'scipy': ('https://docs.scipy.org/doc/scipy/', None),
-    'pymc': ('https://www.pymc.io/projects/docs/en/stable/learn.html', None)
-}
-
-
-# ------------------------ Autosummary ------------------------
-autosummary_generate = True
