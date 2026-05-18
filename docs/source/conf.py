@@ -74,12 +74,7 @@ html_theme_options = {
         },
     ],
     'show_nav_level': 2,
-    'sidebar_nav_type': 'accordion',
     'collapse_navigation': False
-}
-
-html_sidebars = {
-    '**': ['sidebar-nav-bs']
 }
 
 mathjax_path = ('https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML')
