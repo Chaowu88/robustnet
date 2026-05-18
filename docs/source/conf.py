@@ -52,6 +52,7 @@ html_theme_options = {
             'icon': 'fa-brands fa-github',
         },
     ],
+    'show_nav_level': 2
 }
 
 pygments_light_style = 'tango'
