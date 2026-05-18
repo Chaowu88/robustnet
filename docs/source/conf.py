@@ -14,8 +14,6 @@ author = 'Chao Wu'
 version = '0.2.0'
 release = version
 
-pygments_style = 'sphinx'
-
 
 # -- General configuration
 extensions = [
