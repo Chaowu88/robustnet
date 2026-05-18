@@ -33,7 +33,7 @@ autoapi_type = 'python'
 autoapi_dirs = [join(SRC_PATH, 'robustnet')]
 autoapi_add_toctree_entry = True
 
-source_suffix = ['.rst', '.ipynb']
+source_suffix = '.rst'
 master_doc = 'index'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -45,7 +45,7 @@ html_theme_options = {
     'show_toc_level': 2,
     'navigation_with_keys': True,
     'navbar_end': [
-        'search-button',
+        #'search-button',
         'theme-switcher', 
         'navbar-icon-links'
     ],
