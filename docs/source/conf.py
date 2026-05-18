@@ -44,7 +44,7 @@ html_theme = 'pydata_sphinx_theme'
 html_theme_options = {
     'show_toc_level': 2,
     'navigation_with_keys': True,
-    'navbar_end': ['theme-switcher', 'navbar-icon-links'],
+    #'navbar_end': ['theme-switcher', 'navbar-icon-links'],
     'icon_links': [
         {
             'name': 'GitHub',
@@ -52,7 +52,7 @@ html_theme_options = {
             'icon': 'fa-brands fa-github',
         },
     ],
-    'show_nav_level': 2
+    'show_nav_level': 2,
 }
 
 pygments_light_style = 'tango'
