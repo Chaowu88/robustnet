@@ -15,4 +15,4 @@ The typical RobustNet workflow consists of three steps:
 
    Installation <installation>
    Building a model <build_model>
-   Generating parameter sets <parameterize_model>
+   Parameterizing the model <parameterize_model>
