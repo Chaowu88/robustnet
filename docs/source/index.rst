@@ -16,3 +16,4 @@ The typical RobustNet workflow consists of three steps:
    Installation <installation>
    Building a model <build_model>
    Parameterizing the model <parameterize_model>
+   Evaluating robustness <evaluate_robustness>
