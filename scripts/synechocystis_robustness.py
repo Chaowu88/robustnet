@@ -156,7 +156,6 @@ def evaluate_robustness(model, out_dir, samp_res_dir):
         os.makedirs(subout_dir, exist_ok=True)
         # output robustness metrics and metabolic responses of individually 
         # perturbed enzymes
-        print(f'Effective models: {len(rob_res.effective_models)}')#!!!
         print(f'Robustness index: {rob_res.robust_index}')
         rob_res.robust_model_probability(subout_dir, output_data=False)
         rob_res.metabolite_sensitivity(
