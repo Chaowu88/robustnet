@@ -9,7 +9,6 @@ a E. coli model. The workflow consists of three main steps:
 
 
 import os
-from platform import system
 import pandas as pd
 from robustnet import Model
 
@@ -116,13 +115,13 @@ def sample_parameters(model, out_dir, fit_res_dir):
 
     # visualize the comparison between sampled paramters and their priors
     samp_res.plot_sampled_vs_prior_kinetic_parameters(
-        f'{out_dir}/sampled_kparams_plots', parameters='all', output_data=False
+        f'{out_dir}/sampled_kparams_plots', parameters='all'
     )
     samp_res.plot_sampled_vs_prior_metabolites(
-        f'{out_dir}/sampled_mconcs_plots', metabolites='all', output_data=False
+        f'{out_dir}/sampled_mconcs_plots', metabolites='all'
     )
     samp_res.plot_sampled_vs_prior_enzymes(
-        f'{out_dir}/sampled_econcs_plots', enzymes='all', output_data=False
+        f'{out_dir}/sampled_econcs_plots', enzymes='all'
     )
 
 
@@ -158,23 +157,21 @@ def evaluate_robustness(model, out_dir, samp_res_dir):
         # output robustness metrics and metabolic responses of individually 
         # perturbed enzymes
         print(f'Robustness index: {rob_res.robust_index}')
-        rob_res.robust_model_probability(subout_dir, output_data=False)
+        rob_res.robust_model_probability(subout_dir)
         rob_res.metabolite_sensitivity(
-            f'{subout_dir}/metab_sen', kind='stats', metabolites='all', 
-            output_data=False
+            f'{subout_dir}/metab_sen', kind='stats', metabolites='all'
         )
         rob_res.metabolite_distribution(
-            f'{subout_dir}/metab_dist', metabolites='all', output_data=False
+            f'{subout_dir}/metab_dist', metabolites='all'
         )
         rob_res.flux_sensitivity(
-            f'{subout_dir}/flux_sen', kind='stats', reactions='all', 
-            output_data=False
+            f'{subout_dir}/flux_sen', kind='stats', reactions='all'
         )
         rob_res.flux_distribution(
-            f'{subout_dir}/flux_dist', reactions='all', output_data=False
+            f'{subout_dir}/flux_dist', reactions='all'
         )
-        rob_res.eigreal_sensitivity(subout_dir, output_data=False)
-        rob_res.eigreal_distribution(subout_dir, output_data=False)
+        rob_res.eigreal_sensitivity(subout_dir)
+        rob_res.eigreal_distribution(subout_dir)
 
 
 def main():
