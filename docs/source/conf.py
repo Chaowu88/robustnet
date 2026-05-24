@@ -27,7 +27,8 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.autosummary',
     'nbsphinx',
-    'autoapi.extension'
+    'autoapi.extension',
+    'sphinx_togglebutton'
 ]
 
 autoapi_type = 'python'
