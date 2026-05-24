@@ -45,6 +45,9 @@ autosummary_generate = True
 
 pygments_style = 'sphinx'
 
+togglebutton_selector = '.toggle, .admonition.dropdown'
+nbsphinx_allow_errors = True
+
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
