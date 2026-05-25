@@ -9,17 +9,19 @@ a E. coli model. The workflow consists of three main steps:
 
 
 import os
+from pathlib import Path
 import pandas as pd
 from robustnet import Model
 
 
-OUT_DIR = '../../results/ecoli'
-MODEL_FILE = '../../models/e_coli/e_coli_model.xlsx'
-FLUXOMICS = '../../models/e_coli/measured_fluxes.xlsx'
-FLUX_BOUNDS = '../../models/e_coli/flux_bounds.xlsx'
-METABOLOMICS = '../../models/e_coli/measured_metabolites.xlsx'
-PROTEOMICS = '../../models/e_coli/measured_enzymes.xlsx'
-KINETIC_PARAMETERS = '../../models/e_coli/measured_kinetic_parameters.xlsx'
+BASE_DIR = Path(__file__).parent.parent
+OUT_DIR = f'{BASE_DIR}/results/ecoli'
+MODEL_FILE = f'{BASE_DIR}/models/e_coli/e_coli_model.xlsx'
+FLUXOMICS = f'{BASE_DIR}/models/e_coli/measured_fluxes.xlsx'
+FLUX_BOUNDS = f'{BASE_DIR}/models/e_coli/flux_bounds.xlsx'
+METABOLOMICS = f'{BASE_DIR}/models/e_coli/measured_metabolites.xlsx'
+PROTEOMICS = f'{BASE_DIR}/models/e_coli/measured_enzymes.xlsx'
+KINETIC_PARAMETERS = f'{BASE_DIR}/models/e_coli/measured_kinetic_parameters.xlsx'
 
 PERTURB_ENZYMES = [
     'GlcPTS', 'PGI', 'PFK', 'FBPase', 'FBA', 'TPI', 'GAPD', 'PGK', 'PGM', 'ENO', 

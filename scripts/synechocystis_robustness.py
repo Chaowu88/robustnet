@@ -10,16 +10,18 @@ a Synechocystis model. The workflow consists of three main steps:
 
 import os
 import pandas as pd
+from pathlib import Path
 from robustnet import Model
 
 
-OUT_DIR = '../../results/synechocystis'
-MODEL_FILE = '../../models/synechocystis/synechocystis_model.xlsx'
-FLUXOMICS = '../../models/synechocystis/measured_fluxes.xlsx'
-FLUX_BOUNDS = '../../models/synechocystis/flux_bounds.xlsx'
-METABOLOMICS = '../../models/synechocystis/measured_metabolites.xlsx'
-PROTEOMICS = '../../models/synechocystis/measured_enzymes.xlsx'
-KINETIC_PARAMETERS = '../../models/synechocystis/measured_kinetic_parameters.xlsx'
+BASE_DIR = Path(__file__).parent.parent
+OUT_DIR = f'{BASE_DIR}/results/synechocystis'
+MODEL_FILE = f'{BASE_DIR}/models/synechocystis/synechocystis_model.xlsx'
+FLUXOMICS = f'{BASE_DIR}/models/synechocystis/measured_fluxes.xlsx'
+FLUX_BOUNDS = f'{BASE_DIR}/models/synechocystis/flux_bounds.xlsx'
+METABOLOMICS = f'{BASE_DIR}/models/synechocystis/measured_metabolites.xlsx'
+PROTEOMICS = f'{BASE_DIR}/models/synechocystis/measured_enzymes.xlsx'
+KINETIC_PARAMETERS = f'{BASE_DIR}/models/synechocystis/measured_kinetic_parameters.xlsx'
 
 PERTURB_ENZYMES = [
     'RuBisCO', 'PGK', 'GAPD', 'TPI', 'ALD', 'TKT', 'TAL', 'FBPase', 'PGI', 'G6PD',
