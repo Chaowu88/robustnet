@@ -44,7 +44,6 @@ def fit_reference_fluxes(model, out_dir):
     
     fit_res = model.estimate_reference_fluxes(
         bounds={rxn: tuple(row) for rxn, row in flux_bounds.iterrows()},
-        exclude_metabolites=None,
         optimizer='scipy',
         method='COBYQA',
         tol=1e-8
@@ -147,7 +146,6 @@ def evaluate_robustness(model, out_dir, samp_res_dir):
         rob_res = model.evaluate_robustness(
             perturb_enzymes=[enz],
             fold_change=(0.1, 10),
-            exclude_metabolites=['Hcyt', 'Hper'],
             n_steps=300,
             n_models=1000,
             n_jobs=100,
