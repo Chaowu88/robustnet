@@ -3,7 +3,7 @@
 import sys
 from os.path import dirname, join
 from datetime import datetime
-#from importlib.metadata import version as get_version
+from importlib.metadata import version as get_version
 
 
 SRC_PATH = join(dirname(dirname(dirname(__file__))), 'src')
@@ -14,7 +14,7 @@ sys.path.insert(0, SRC_PATH)
 project = 'RobustNet'
 copyright = f'{datetime.now():%Y}, Chao Wu'
 author = 'Chao Wu'
-version = '0.2.0'#get_version('robustnet')
+version = get_version('robustnet')
 release = version
 
 
